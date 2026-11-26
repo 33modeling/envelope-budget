@@ -1,0 +1,42 @@
+{
+ "evidence_id": "ev_2c29be5a09df369342e28d6eb7195fc252791fcd34a0447fb8318acb91e5dc25",
+ "query": {
+  "seed": {
+   "kind": "property",
+   "name": "carryover"
+  },
+  "direction": "forward-influence",
+  "include_ambiguous_dynamic_edges": true,
+  "expected": null
+ },
+ "status": "ambiguous",
+ "seeds": 1,
+ "nodes": [
+  {
+   "kind": "expression",
+   "at": "packages/loot-core/src/server/budget/base.ts:271",
+   "inside_function": "handleBudgetChange",
+   "name": null
+  },
+  {
+   "kind": "property-slot",
+   "at": "packages/loot-core/src/server/budget/base.ts:None",
+   "inside_function": "handleBudgetChange",
+   "name": "carryover"
+  }
+ ],
+ "relations": [
+  {
+   "relation": "reads-property",
+   "resolution": "candidate",
+   "at": "packages/loot-core/src/server/budget/base.ts:None"
+  }
+ ],
+ "unknowns": [
+  {
+   "reason": "ambiguous-target",
+   "detail": "Static read property /carryover has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+   "at": "packages/loot-core/src/server/budget/base.ts:271"
+  }
+ ]
+}

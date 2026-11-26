@@ -1,0 +1,50 @@
+{
+ "evidence_id": "ev_fa562ea22173577ab6665f138546003ae17090d6e2f1002a44734dc3dff173aa",
+ "query": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "629902d2888437c4df95c880c6cd028b0b9f20ebb67c2e2f50936db1020d71b3"
+  },
+  "direction": "callers",
+  "include_ambiguous_dynamic_edges": true,
+  "expected": null
+ },
+ "status": "found",
+ "seeds": 1,
+ "nodes": [
+  {
+   "kind": "function",
+   "at": "packages/loot-core/src/server/rules/rule-utils.ts:87",
+   "inside_function": null,
+   "name": "rankRules"
+  }
+ ],
+ "relations": [],
+ "unknowns": [
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/rules/rule-utils.ts:109"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/rules/rule-utils.ts:95"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/rules/rule-utils.ts:109"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/rules/rule-utils.ts:98"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/rules/rule-utils.ts:101"
+  }
+ ]
+}

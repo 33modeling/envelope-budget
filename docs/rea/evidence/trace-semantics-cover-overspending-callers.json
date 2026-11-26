@@ -1,0 +1,60 @@
+{
+ "evidence_id": "ev_0d433b881e490acb6d81cc555dfffd7da452ecff450ab602fbc8c0569cd2accf",
+ "query": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "caee3cfd99dab7d6f669561ebac062e02b8994f083dc8f70ee80bcdb97709772"
+  },
+  "direction": "callers",
+  "include_ambiguous_dynamic_edges": true,
+  "expected": null
+ },
+ "status": "found",
+ "seeds": 1,
+ "nodes": [
+  {
+   "kind": "function",
+   "at": "packages/loot-core/src/server/budget/actions.ts:575",
+   "inside_function": null,
+   "name": "coverOverspending"
+  }
+ ],
+ "relations": [],
+ "unknowns": [
+  {
+   "reason": "dynamic-call",
+   "detail": "Call target batchMessages is imported from outside this source.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:608"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:606"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Direct invocation produces promise; body results require separate consumption.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:590"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:588"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Direct invocation produces promise; body results require separate consumption.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:589"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:606"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Direct invocation produces promise; body results require separate consumption.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:599"
+  }
+ ]
+}

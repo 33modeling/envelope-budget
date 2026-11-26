@@ -1,0 +1,65 @@
+{
+ "trace": "trace-feature-schedule-dates",
+ "seed": {
+  "kind": "module",
+  "value": "packages/loot-core/src/shared/schedules.ts",
+  "match": "exact",
+  "case_sensitive": false
+ },
+ "direction": "both",
+ "summary": {
+  "matched_seeds": 23,
+  "traced_nodes": 2966,
+  "traced_edges": 3303,
+  "terminal_paths": 380,
+  "native_handoffs": 0,
+  "observed_facts": 1882,
+  "inferred_facts": 4710,
+  "unknown_facts": 0,
+  "unavailable_facts": 378
+ },
+ "coverage": {
+  "status": "partial",
+  "source_graph_status": "partial",
+  "total_seed_matches": 23
+ },
+ "seed_adjacent_edges": {
+  "exposes/None": 21,
+  "contains/None": 2,
+  "imports/not-found": 4,
+  "imports/unavailable": 4
+ },
+ "seed_adjacent_names": [
+  "DEFAULT_UPCOMING_SCHEDULE_DAYS",
+  "UPCOMING_LENGTH_PRESET_LABELS",
+  "UPCOMING_LENGTH_PRESET_OPTIONS",
+  "UPCOMING_LENGTH_PRESET_VALUES",
+  "computeSchedulePreviewTransactions",
+  "extractScheduleConds",
+  "getDateWithSkippedWeekend",
+  "getHasTransactionsQuery",
+  "getNextDate",
+  "getNextDateAfter",
+  "getOccurrencesBetween",
+  "getScheduleOccurrenceMatchStartDate",
+  "getScheduledAmount",
+  "getStatus",
+  "getUpcomingDays",
+  "import #server/rules",
+  "import ./months",
+  "import ./query",
+  "import date-fns",
+  "indexPostedScheduleTransactions",
+  "isCustomUpcomingLength",
+  "isForPreview",
+  "isScheduleOccurrencePosted",
+  "recurConfigToRSchedule",
+  "scheduleIsRecurring"
+ ],
+ "limitations": [
+  "A trace reports graph relationships, not proof that code executed or that a feature is reachable in every state.",
+  "Native handoffs never open a binary or invoke a provider automatically; snapshot reuse remains provider/profile/target exact.",
+  "Static, native, passive-runtime, inferred, and unknown facts retain their original authority in the returned graph.",
+  "The source application graph is incomplete; unmatched seeds and frontiers remain unknown."
+ ]
+}

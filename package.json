@@ -1,0 +1,17 @@
+{
+  "name": "envelope-budget",
+  "version": "1.0.0",
+  "private": true,
+  "description": "한국어 봉투식 가계부 웹앱(정적, 기기 저장)",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
+  }
+}

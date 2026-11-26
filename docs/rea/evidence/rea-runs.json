@@ -1,0 +1,316 @@
+{
+ "tool": "rea-agents 6.8.0 (npx, 전역 설치·MCP 설정 없음)",
+ "node": "v22.23.4",
+ "date": "2026-11-26",
+ "target": {
+  "repo": "https://github.com/actualbudget/actual",
+  "commit": "660d834bafc32a1a6a552044c263a93be7ab6389",
+  "license": "MIT",
+  "checkout": "git init + sparse-checkout(no-cone) + fetch --depth 1 --filter=blob:none; 받은 폴더는 scripts/run-rea.sh 참고(실행·npm install 하지 않음)"
+ },
+ "note": "committed_as 가 없는 파일은 크기 때문에 저장소에 넣지 않았다(전체 Evidence 121 MB, 추적 입력은 Evidence 를 감싼 127 MB 파일 13개). 같은 명령(scripts/run-rea.sh)으로 다시 만들 수 있고 SHA-256 으로 대조한다. 저장소에 넣은 파일의 로컬 경로는 $ACTUAL·$WORK 로 바꿨다.",
+ "runs": [
+  {
+   "command": "npx -y rea-agents@6.8.0 import-reference-source <actual> --format json",
+   "exit": 0,
+   "seconds": 4.0,
+   "outputs": [
+    {
+     "file": "ref-source.json",
+     "bytes": 876735,
+     "sha256": "253702d910852055d64598bb016230263a2a26d3aa9c982084c1a1034ecf9eed",
+     "evidence_id": null,
+     "committed_as": null
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 import-reference-source <actual> --detail summary --outline-depth 3 --format json",
+   "exit": 0,
+   "seconds": 4.0,
+   "outputs": [
+    {
+     "file": "ref-source.summary.json",
+     "bytes": 2995,
+     "sha256": "df64bffb6b216f78b29e9bf62960a4113273166599b82bf7e5109fd0164a7717",
+     "evidence_id": null,
+     "committed_as": "reference-source.summary.json"
+    }
+   ]
+  },
+  {
+   "command": "NODE_OPTIONS=--max-old-space-size=6144 npx -y rea-agents@6.8.0 analyze-javascript-application <actual> --source-paths-json selection.json --max-semantic-nodes 300000 --max-semantic-unknowns 300000 --format json",
+   "exit": 0,
+   "seconds": 25.2,
+   "inputs": [
+    {
+     "file": "selection.json",
+     "bytes": 5602,
+     "sha256": "d6eda964facc926b3a15cf629508f02dcf01b06be7ffee99a258bf98c347b304",
+     "evidence_id": null,
+     "committed_as": "selection.json"
+    }
+   ],
+   "outputs": [
+    {
+     "file": "app-evidence.json",
+     "bytes": 120989285,
+     "sha256": "28261399aa3a523b03d1a9b38d6ff57489a23bf8bd4df9bb386e1805eb12019e",
+     "evidence_id": "ev_0e1f2c483dc46fb0912b982a016455d35f5886bfa174029060746f5c5f54a8d0",
+     "committed_as": null
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-summary.json --format json",
+   "exit": 0,
+   "seconds": 11.9,
+   "inputs": [
+    {
+     "file": "view-summary.json",
+     "bytes": 89,
+     "sha256": "e9dc13f0bb2a8445e7ccc71192ec21e1e0f8cbcdb0c4f4b15f01bb74a8f561e7",
+     "evidence_id": null,
+     "committed_as": null
+    }
+   ],
+   "outputs": [
+    {
+     "file": "app-summary-view.json",
+     "bytes": 16983,
+     "sha256": "a36c74d14a455dc1a06662834addd9b9fc5a318e9e7f723155490b0cf07656f4",
+     "evidence_id": "ev_717bac04f824343fb2e3b3a8cf9db85964bf8dd6462eeef3124f71f72fae64f1",
+     "committed_as": "app-analysis.summary-view.json"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-modules.json --format json",
+   "exit": 0,
+   "seconds": 11.7,
+   "inputs": [
+    {
+     "file": "view-modules.json",
+     "bytes": 200,
+     "sha256": "a6dca2e0c0e169eb248f84f0b9206066edd207b633539932e3e33f41e2888119",
+     "evidence_id": null,
+     "committed_as": null
+    }
+   ],
+   "outputs": [
+    {
+     "file": "app-modules-view.json",
+     "bytes": 59379,
+     "sha256": "7f72994e4f85a29f5f9372e7db6bd5ff8bb39f762c3be2fd06772fe449361e70",
+     "evidence_id": "ev_26cd184a53a6d307d77df6f88c32df2916c683acaeb9a6419729d763cd70512e",
+     "committed_as": "app-analysis.modules-view.json"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-facts.json --format json",
+   "exit": 0,
+   "seconds": 11.7,
+   "inputs": [
+    {
+     "file": "view-facts.json",
+     "bytes": 1017,
+     "sha256": "090a4f543581f317b0dcb96d866ada4e4bca7ef1ff8ff4ea2be94e26cb1491d3",
+     "evidence_id": null,
+     "committed_as": null
+    }
+   ],
+   "outputs": [
+    {
+     "file": "app-facts-view.json",
+     "bytes": 140783,
+     "sha256": "297c71c5e6aef005a5a2f1dc581e4ef9159f1d248b283b0c91bee67f8da90493",
+     "evidence_id": "ev_65ccf2a9b445c306f7ed63f037e4a6c887964b3a8cb7beea7539c1171253338a",
+     "committed_as": "app-analysis.facts-view.json"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-csv-export-input.json --format json",
+   "exit": 0,
+   "seconds": 14.0,
+   "outputs": [
+    {
+     "file": "trace-feature-csv-export.json",
+     "bytes": 14078686,
+     "sha256": "208407370ac8e4cc3df09af99a74d57bb1af397b5da1a35cd1f4e70a9d90f654",
+     "evidence_id": "ev_07bba77e7d127c94a7f043c72757917c43c7153c03c59fddb0e7f67982641003",
+     "committed_as": "trace-feature-csv-export.summary.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-envelope-sheet-input.json --format json",
+   "exit": 0,
+   "seconds": 11.4,
+   "outputs": [
+    {
+     "file": "trace-feature-envelope-sheet.json",
+     "bytes": 14079990,
+     "sha256": "afbe7c2f696411da1ab7a32d95a5611db727af524afefc56b91e9693787ba6d2",
+     "evidence_id": "ev_e86cd9f7153ec61eecd300db76b26b1e3f091c585221626e2ba27aef12b2a54a",
+     "committed_as": "trace-feature-envelope-sheet.summary.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-rule-ranking-input.json --format json",
+   "exit": 0,
+   "seconds": 11.3,
+   "outputs": [
+    {
+     "file": "trace-feature-rule-ranking.json",
+     "bytes": 14080262,
+     "sha256": "3c1626632dd06e3ce8236fc0dd7fa3ccdfd081270d2e4aa432d599dde3c7a290",
+     "evidence_id": "ev_440a0cc23f4c31d4fd17c1e6cd44b043d6282448588bff0e6d16fcf37ed67628",
+     "committed_as": "trace-feature-rule-ranking.summary.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-schedule-dates-input.json --format json",
+   "exit": 0,
+   "seconds": 11.2,
+   "outputs": [
+    {
+     "file": "trace-feature-schedule-dates.json",
+     "bytes": 14083732,
+     "sha256": "8eff52ee3017b01f9e519ab9b14e60a565e028bf1ddb70a7d6a2ad9bd06d0c39",
+     "evidence_id": "ev_dc511ee60f43613e654cb2e44c758f36ada5435b80c5887553847ffc4249b49d",
+     "committed_as": "trace-feature-schedule-dates.summary.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-carryover-property-input.json --format json",
+   "exit": 0,
+   "seconds": 11.3,
+   "outputs": [
+    {
+     "file": "trace-semantics-carryover-property.json",
+     "bytes": 10265,
+     "sha256": "39e7335fb49fee2b81eb43c81434853f686b2f80da3f91b36b2a6c7e97d47a39",
+     "evidence_id": "ev_2c29be5a09df369342e28d6eb7195fc252791fcd34a0447fb8318acb91e5dc25",
+     "committed_as": "trace-semantics-carryover-property.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-cover-overspending-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 11.2,
+   "outputs": [
+    {
+     "file": "trace-semantics-cover-overspending-callers.json",
+     "bytes": 11557,
+     "sha256": "188bcf7822a314b7a1e9642da5f9eb3237b01bd5b16afd84373e50a4d95fc60c",
+     "evidence_id": "ev_0d433b881e490acb6d81cc555dfffd7da452ecff450ab602fbc8c0569cd2accf",
+     "committed_as": "trace-semantics-cover-overspending-callers.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-probable-category-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 11.5,
+   "outputs": [
+    {
+     "file": "trace-semantics-probable-category-callers.json",
+     "bytes": 11261,
+     "sha256": "96e96e32ce2e7f313a6b780506e264e4cceab9f3b126c5d37e2ea08b5c42058d",
+     "evidence_id": "ev_b1bea4459af77c754db5c92b247915e9c63043f5696bef7710f17c5139d45b49",
+     "committed_as": "trace-semantics-probable-category-callers.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-rankrules-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 11.3,
+   "outputs": [
+    {
+     "file": "trace-semantics-rankrules-callers.json",
+     "bytes": 10165,
+     "sha256": "aa3112960dd4f4eed73c4b79ad49a7015dd15ed60b89ca9e5341736062181f44",
+     "evidence_id": "ev_fa562ea22173577ab6665f138546003ae17090d6e2f1002a44734dc3dff173aa",
+     "committed_as": "trace-semantics-rankrules-callers.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-recur-config-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 11.4,
+   "outputs": [
+    {
+     "file": "trace-semantics-recur-config-callers.json",
+     "bytes": 12613,
+     "sha256": "76791f22e54a3a6a5e9bb756f0534165d7c6c695d92f22d2717a8832819164a6",
+     "evidence_id": "ev_5d158fd2171eac9cdd61e5de52cfe96e1ed43402db5cd4eeba3f7ed871be0418",
+     "committed_as": "trace-semantics-recur-config-callers.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-set-budget-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 11.1,
+   "outputs": [
+    {
+     "file": "trace-semantics-set-budget-callers.json",
+     "bytes": 27925,
+     "sha256": "2741c4e27f95a5fdd35b43fedd3572e8ccdd90e62f23114c228cc18518eee793",
+     "evidence_id": "ev_b74e56f3597377715dbef75200a971115d066fa5750ce5c0d5e4532d462fd1d2",
+     "committed_as": "trace-semantics-set-budget-callers.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-skip-weekend-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 11.2,
+   "outputs": [
+    {
+     "file": "trace-semantics-skip-weekend-callers.json",
+     "bytes": 13163,
+     "sha256": "7339e14fe0c57053ea08689b27dc69f8051614bcf1d782982315f48a79080d78",
+     "evidence_id": "ev_2bb751cd34030627deb74dfbc232c8cedce1d87bcbdaa1f8e71925e32c2452dc",
+     "committed_as": "trace-semantics-skip-weekend-callers.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-skipweekend-property-input.json --format json",
+   "exit": 0,
+   "seconds": 11.4,
+   "outputs": [
+    {
+     "file": "trace-semantics-skipweekend-property.json",
+     "bytes": 30091,
+     "sha256": "930ba95699baeece36c7e2aad990e61136c61dfebd3a8b0aa57ad3ed6e0fb4e8",
+     "evidence_id": "ev_63b2371a268a45873d7d6ca4795812dbb57e3774f3de27887095f4197f10bcaa",
+     "committed_as": "trace-semantics-skipweekend-property.json (요약)"
+    }
+   ]
+  },
+  {
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-transfer-category-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 11.3,
+   "outputs": [
+    {
+     "file": "trace-semantics-transfer-category-callers.json",
+     "bytes": 8990,
+     "sha256": "285b4a2118b1e81975d682e266f755da1ffd8684f628a599da7d4f03695ae5c7",
+     "evidence_id": "ev_b99d561f6f4d36cf03ad349b12445cd1e3410f8f7410201a96950f6419c5547d",
+     "committed_as": "trace-semantics-transfer-category-callers.json (요약)"
+    }
+   ]
+  }
+ ]
+}

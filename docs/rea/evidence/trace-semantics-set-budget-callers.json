@@ -1,0 +1,178 @@
+{
+ "evidence_id": "ev_b74e56f3597377715dbef75200a971115d066fa5750ce5c0d5e4532d462fd1d2",
+ "query": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "f799d59dc53dd112ce5a87c84e2b91ea80465aa98278545af400f849600623ec"
+  },
+  "direction": "callers",
+  "include_ambiguous_dynamic_edges": true,
+  "expected": null
+ },
+ "status": "found",
+ "seeds": 1,
+ "nodes": [
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:310",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:388",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:684",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "function",
+   "at": "packages/loot-core/src/server/budget/actions.ts:130",
+   "inside_function": null,
+   "name": "setBudget"
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:723",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:612",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:756",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:261",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:619",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:239",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:649",
+   "inside_function": "transferAvailable",
+   "name": null
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:717",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/budget/actions.ts:275",
+   "inside_function": null,
+   "name": null
+  }
+ ],
+ "relations": [
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:261"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:388"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:619"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:612"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:684"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:239"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:756"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:723"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:649"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:310"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:717"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/budget/actions.ts:275"
+  }
+ ],
+ "unknowns": [
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:149"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Call target safeNumber is imported from outside this source.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:139"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:151"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:142"
+  }
+ ]
+}

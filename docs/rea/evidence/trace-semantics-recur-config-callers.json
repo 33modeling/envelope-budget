@@ -1,0 +1,70 @@
+{
+ "evidence_id": "ev_5d158fd2171eac9cdd61e5de52cfe96e1ed43402db5cd4eeba3f7ed871be0418",
+ "query": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "956034b3ac4349c286cde7f741aeffdbfe0fa2aaf8d8fe32b904db91394cb0b4"
+  },
+  "direction": "callers",
+  "include_ambiguous_dynamic_edges": true,
+  "expected": null
+ },
+ "status": "found",
+ "seeds": 1,
+ "nodes": [
+  {
+   "kind": "function",
+   "at": "packages/loot-core/src/shared/schedules.ts:201",
+   "inside_function": null,
+   "name": "recurConfigToRSchedule"
+  }
+ ],
+ "relations": [],
+ "unknowns": [
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:237"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unresolved call target Error.",
+   "at": "packages/loot-core/src/shared/schedules.ts:251"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:204"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:235"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:217"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:241"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:234"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:238"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:203"
+  }
+ ]
+}

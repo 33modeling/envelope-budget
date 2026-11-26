@@ -1,0 +1,40 @@
+{
+ "evidence_id": "ev_b99d561f6f4d36cf03ad349b12445cd1e3410f8f7410201a96950f6419c5547d",
+ "query": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "b1612e8c7ed8776390e4b2354a1ed70e6b264c9cea3f5328e631cc3169147c95"
+  },
+  "direction": "callers",
+  "include_ambiguous_dynamic_edges": true,
+  "expected": null
+ },
+ "status": "found",
+ "seeds": 1,
+ "nodes": [
+  {
+   "kind": "function",
+   "at": "packages/loot-core/src/server/budget/actions.ts:700",
+   "inside_function": null,
+   "name": "transferCategory"
+  }
+ ],
+ "relations": [],
+ "unknowns": [
+  {
+   "reason": "dynamic-call",
+   "detail": "Direct invocation produces promise; body results require separate consumption.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:714"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:713"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Call target batchMessages is imported from outside this source.",
+   "at": "packages/loot-core/src/server/budget/actions.ts:716"
+  }
+ ]
+}

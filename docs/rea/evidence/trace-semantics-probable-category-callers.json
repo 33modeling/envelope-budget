@@ -1,0 +1,52 @@
+{
+ "evidence_id": "ev_b1bea4459af77c754db5c92b247915e9c63043f5696bef7710f17c5139d45b49",
+ "query": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "4aee3479763a186e126ecf220eb0c566387d01016873622d9a7aeec09f33cbff"
+  },
+  "direction": "callers",
+  "include_ambiguous_dynamic_edges": true,
+  "expected": null
+ },
+ "status": "found",
+ "seeds": 1,
+ "nodes": [
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/server/transactions/transaction-rules.ts:1041",
+   "inside_function": "updateCategoryRules",
+   "name": null
+  },
+  {
+   "kind": "function",
+   "at": "packages/loot-core/src/server/transactions/transaction-rules.ts:976",
+   "inside_function": null,
+   "name": "getProbableCategory"
+  }
+ ],
+ "relations": [
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/server/transactions/transaction-rules.ts:1041"
+  }
+ ],
+ "unknowns": [
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/transactions/transaction-rules.ts:979"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unresolved call target Map.",
+   "at": "packages/loot-core/src/server/transactions/transaction-rules.ts:977"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/server/transactions/transaction-rules.ts:985"
+  }
+ ]
+}

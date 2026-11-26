@@ -1,0 +1,52 @@
+{
+ "trace": "trace-feature-rule-ranking",
+ "seed": {
+  "kind": "module",
+  "value": "packages/loot-core/src/server/rules/rule-utils.ts",
+  "match": "exact",
+  "case_sensitive": false
+ },
+ "direction": "both",
+ "summary": {
+  "matched_seeds": 10,
+  "traced_nodes": 2966,
+  "traced_edges": 3303,
+  "terminal_paths": 380,
+  "native_handoffs": 0,
+  "observed_facts": 1882,
+  "inferred_facts": 4710,
+  "unknown_facts": 0,
+  "unavailable_facts": 378
+ },
+ "coverage": {
+  "status": "partial",
+  "source_graph_status": "partial",
+  "total_seed_matches": 10
+ },
+ "seed_adjacent_edges": {
+  "imports/unavailable": 10,
+  "contains/None": 2,
+  "exposes/None": 8
+ },
+ "seed_adjacent_names": [
+  "assert",
+  "import #platform/server/log",
+  "import #server/errors",
+  "import #server/util/rschedule",
+  "import #shared/schedules",
+  "import date-fns",
+  "iterateIds",
+  "migrateIds",
+  "parseBetweenAmount",
+  "parseBetweenDate",
+  "parseDateString",
+  "parseRecurDate",
+  "rankRules"
+ ],
+ "limitations": [
+  "A trace reports graph relationships, not proof that code executed or that a feature is reachable in every state.",
+  "Native handoffs never open a binary or invoke a provider automatically; snapshot reuse remains provider/profile/target exact.",
+  "Static, native, passive-runtime, inferred, and unknown facts retain their original authority in the returned graph.",
+  "The source application graph is incomplete; unmatched seeds and frontiers remain unknown."
+ ]
+}

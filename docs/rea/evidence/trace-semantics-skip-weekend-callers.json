@@ -1,0 +1,68 @@
+{
+ "evidence_id": "ev_2bb751cd34030627deb74dfbc232c8cedce1d87bcbdaa1f8e71925e32c2452dc",
+ "query": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "8863193aafd1c3c66d85d27cb134d64bfbe2a83f389810a9e9cc70b5d06cc16f"
+  },
+  "direction": "callers",
+  "include_ambiguous_dynamic_edges": true,
+  "expected": null
+ },
+ "status": "found",
+ "seeds": 1,
+ "nodes": [
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/shared/schedules.ts:493",
+   "inside_function": "getOccurrencesBetween",
+   "name": null
+  },
+  {
+   "kind": "function",
+   "at": "packages/loot-core/src/shared/schedules.ts:340",
+   "inside_function": null,
+   "name": "getDateWithSkippedWeekend"
+  },
+  {
+   "kind": "call-site",
+   "at": "packages/loot-core/src/shared/schedules.ts:307",
+   "inside_function": "getNextDate",
+   "name": null
+  }
+ ],
+ "relations": [
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/shared/schedules.ts:307"
+  },
+  {
+   "relation": "calls",
+   "resolution": "resolved",
+   "at": "packages/loot-core/src/shared/schedules.ts:493"
+  }
+ ],
+ "unknowns": [
+  {
+   "reason": "dynamic-call",
+   "detail": "Unresolved call target Error.",
+   "at": "packages/loot-core/src/shared/schedules.ts:350"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:346"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:344"
+  },
+  {
+   "reason": "dynamic-call",
+   "detail": "Unsupported MemberExpression call target.",
+   "at": "packages/loot-core/src/shared/schedules.ts:348"
+  }
+ ]
+}

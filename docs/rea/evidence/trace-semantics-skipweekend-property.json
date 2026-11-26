@@ -1,0 +1,130 @@
+{
+ "evidence_id": "ev_63b2371a268a45873d7d6ca4795812dbb57e3774f3de27887095f4197f10bcaa",
+ "query": {
+  "seed": {
+   "kind": "property",
+   "name": "skipWeekend"
+  },
+  "direction": "forward-influence",
+  "include_ambiguous_dynamic_edges": true,
+  "expected": null
+ },
+ "status": "ambiguous",
+ "seeds": 5,
+ "nodes": [
+  {
+   "kind": "property-slot",
+   "at": "packages/loot-core/src/shared/schedules.ts:None",
+   "inside_function": "getNextDate",
+   "name": "skipWeekend"
+  },
+  {
+   "kind": "property-slot",
+   "at": "packages/loot-core/src/server/rules/rule-utils.ts:None",
+   "inside_function": "parseRecurDate",
+   "name": "skipWeekend"
+  },
+  {
+   "kind": "expression",
+   "at": "packages/loot-core/src/server/rules/rule-utils.ts:229",
+   "inside_function": "parseRecurDate",
+   "name": null
+  },
+  {
+   "kind": "expression",
+   "at": "packages/loot-core/src/server/schedules/occurrences.ts:43",
+   "inside_function": "getScheduleDates",
+   "name": null
+  },
+  {
+   "kind": "property-slot",
+   "at": "packages/loot-core/src/shared/schedules.ts:None",
+   "inside_function": "getOccurrencesBetween",
+   "name": "skipWeekend"
+  },
+  {
+   "kind": "expression",
+   "at": "packages/loot-core/src/server/schedules/app.ts:530",
+   "inside_function": null,
+   "name": null
+  },
+  {
+   "kind": "expression",
+   "at": "packages/loot-core/src/shared/schedules.ts:306",
+   "inside_function": "getNextDate",
+   "name": null
+  },
+  {
+   "kind": "property-slot",
+   "at": "packages/loot-core/src/server/schedules/occurrences.ts:None",
+   "inside_function": "getScheduleDates",
+   "name": "skipWeekend"
+  },
+  {
+   "kind": "expression",
+   "at": "packages/loot-core/src/shared/schedules.ts:486",
+   "inside_function": "getOccurrencesBetween",
+   "name": null
+  },
+  {
+   "kind": "property-slot",
+   "at": "packages/loot-core/src/server/schedules/app.ts:None",
+   "inside_function": "getUpcomingDates",
+   "name": "skipWeekend"
+  }
+ ],
+ "relations": [
+  {
+   "relation": "reads-property",
+   "resolution": "candidate",
+   "at": "packages/loot-core/src/shared/schedules.ts:None"
+  },
+  {
+   "relation": "reads-property",
+   "resolution": "candidate",
+   "at": "packages/loot-core/src/server/schedules/app.ts:None"
+  },
+  {
+   "relation": "reads-property",
+   "resolution": "candidate",
+   "at": "packages/loot-core/src/server/schedules/occurrences.ts:None"
+  },
+  {
+   "relation": "reads-property",
+   "resolution": "candidate",
+   "at": "packages/loot-core/src/shared/schedules.ts:None"
+  },
+  {
+   "relation": "reads-property",
+   "resolution": "candidate",
+   "at": "packages/loot-core/src/server/rules/rule-utils.ts:None"
+  }
+ ],
+ "unknowns": [
+  {
+   "reason": "ambiguous-target",
+   "detail": "Static read property /data/skipWeekend has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+   "at": "packages/loot-core/src/shared/schedules.ts:486"
+  },
+  {
+   "reason": "ambiguous-target",
+   "detail": "Static read property /schedule/data/skipWeekend has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+   "at": "packages/loot-core/src/shared/schedules.ts:306"
+  },
+  {
+   "reason": "ambiguous-target",
+   "detail": "Static read property /skipWeekend has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+   "at": "packages/loot-core/src/server/schedules/app.ts:530"
+  },
+  {
+   "reason": "ambiguous-target",
+   "detail": "Static read property /skipWeekend has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+   "at": "packages/loot-core/src/server/rules/rule-utils.ts:229"
+  },
+  {
+   "reason": "ambiguous-target",
+   "detail": "Static read property /skipWeekend has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+   "at": "packages/loot-core/src/server/schedules/occurrences.ts:43"
+  }
+ ]
+}
